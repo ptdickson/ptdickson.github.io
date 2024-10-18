@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html dir="ltr" lang="zh_tw"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>reCAPTCHA</title>
+<style type="text/css">
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), local('sans-serif'), url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), local('sans-serif'), url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu5mxKKTU1Kvnz.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), local('sans-serif'), url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7mxKKTU1Kvnz.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), local('sans-serif'), url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4WxKKTU1Kvnz.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), local('sans-serif'), url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7WxKKTU1Kvnz.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), local('sans-serif'), url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7GxKKTU1Kvnz.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), local('sans-serif'), url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), local('sans-serif-medium'), url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fCRc4AMP6lbBP.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), local('sans-serif-medium'), url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fABc4AMP6lbBP.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), local('sans-serif-medium'), url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fCBc4AMP6lbBP.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), local('sans-serif-medium'), url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBxc4AMP6lbBP.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), local('sans-serif-medium'), url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fCxc4AMP6lbBP.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), local('sans-serif-medium'), url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fChc4AMP6lbBP.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), local('sans-serif-medium'), url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Roboto Black'), local('Roboto-Black'), local('sans-serif-black'), url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmYUtfCRc4AMP6lbBP.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Roboto Black'), local('Roboto-Black'), local('sans-serif-black'), url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmYUtfABc4AMP6lbBP.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Roboto Black'), local('Roboto-Black'), local('sans-serif-black'), url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmYUtfCBc4AMP6lbBP.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Roboto Black'), local('Roboto-Black'), local('sans-serif-black'), url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmYUtfBxc4AMP6lbBP.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Roboto Black'), local('Roboto-Black'), local('sans-serif-black'), url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmYUtfCxc4AMP6lbBP.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Roboto Black'), local('Roboto-Black'), local('sans-serif-black'), url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmYUtfChc4AMP6lbBP.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Roboto Black'), local('Roboto-Black'), local('sans-serif-black'), url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmYUtfBBc4AMP6lQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+</style>
+<link rel="stylesheet" type="text/css" href="./styles__ltr.css">
+<script nonce="" type="text/javascript">window['__recaptcha_api'] = 'https://recaptcha.net/recaptcha/api2/';</script>
+<script type="text/javascript" src="./recaptcha__zh_tw.js" nonce="">
+      
+    </script><script type="text/javascript" charset="UTF-8" src="./znsTYO7RqQwlzCHLN0e7xYvYeFH4xzn7su6A2OM1vrA.js" nonce=""></script></head>
+<body><input type="hidden" id="recaptcha-token" value="03AFcWeA6vsADQnTOvra24Qy9fHDbhIN5c9s9coOnMe8wW8hqrXEkq8bEtownduO8CTPiOSL8MquPxel9g9DFVerD7kcYLtXompT1h9vCbCLHq9WdxgBJvF_Sx2M18l79rAOp297HyO5QL9w3g4D91iU0xpUARR-toXh6JxmyUtUA4qmSy-WEmZ5y_0zQE4JPumQzH2fUfZUqC2dA8ceTMVyu9pqc4q0_DAdPc5_W5M3tOAM5KMRxSyugFQPq27vrqmtxFy1iIAiokaGZSyZ102nwU779u5wakj9_g3BbPF-bEl1yiCmfLvayruuGmff6h5sM_2LQlB14ybUeZcc4nx8X8VaW5wZi_eaCklxjToABjEzkLcgtPNtc-OqiSP0MTvdO_9T-3ZKCajveFoY9GeCoonjaUqjNy5tkkOZGsIgYNBj00jhLQHLPn48CeQ3h34EFFizUWv9Qs0VHtcghTLqBTnXmI_WmH1sAJxUrbiUf0-scEvN2GhgO9QJSUSWt23xICbs952utcXJNLP1f7SPnaYLsTHz0X5XTy-P-VK2gwRueIB97dkv9oFDVXqWWVMD0jk7Bj0biXstI_H6kRP7k6t_gbQ4RHVRko2O3LqxSKL-_db4D1g54sDVK8gsa3mdG6-BfvcmsPy8nWIWAg7ibUARTyq2m98zZ9Z8YKJmWqx_gk7u3rlR_Q8pQs58HCuWL3-Ql6Kst50NgAL0Gyua0Mogn0B78unXsYDlTB-Z6qilEXorOcodAhWMyLvME_SgaPBbCbqIRc_DYy4wx_Pl2Sl-RdmXK5LaRlAfMjKQWMZWGKUwcvKPQtN3ccnOBok394nnihag9-aj4uWb0sTNkD9Z95CClYHNUqosBFKcEIZ1iI4OjSh0ZzsB-lCebn5Rp_rvdURWJkLaC2zJLol1xxdRcM57SM5_3LBnji7fWdLZ61Dgo201lwPzVc_w4V4BgFj66R4kgPE39J_PhLgDtcyiEfa-_iR7rdKob2cSSw7-mqqK145cBsfdtptgN9SZxVlEfILw2G371rX0PC-cqnOkzr_PnAAQDAIF8k_Asl-1sAUYNIHOdVAcMfmIWjVC995jKZ27wA-lFPtfscHbm2R8egk4uSU5Y1aAfrJ4OzEhdBBmAQsBHnJoUawNZMikxT59V6pEnEIddf4OG9YLsv_0Ib70hxWX6lQnOCluN6YQ60LmW8enep3ZaZGM8fMzOqkdTJin1P6kVAQM-DHRISAhqs9XQhshlQ2gFtYQn9GZD9EAiJeIQon3caGBkzpoUe_BGSxw3_5stsFqXyHmT4hpw8tM5DiiIBs6mfKzOHtUs101Zt5bxY2Kh-UUhChEltj2uwvXBXXcKakb_i4TQUbIdWf7HGpkc5zWKiOCIqBwu1YnlMn3a_zU3vb6dH77dyrbx9O082JaA39i4FO-K-kFbdNHgjFXyA6IHYFcgPkKpKHEMbkob1emNIDL7B5trwguM2LiW4C2WtgsHFXSLEv8ZdzmvswZaLOWgPOz3R5BeZ7tvwTiQArEpoylj_OAF8bmWffuBYMvKavfl02_ylQXiqK-HvMGWxkqb1I4Iw-LR195yQDyubjBGevbGrMwKhJdbyudui9uyl9OEg_vANI73ZApdw3xwUSGlSaUzufVTVI132KqoOfhuAJdoVWUWEwLJNXs_6r_dLGw4o23t4h71BehgCxic8ixuEcw8ehs2_YKMMet0QlnD2cPPzih8XwHsX8Wa5aUQq1TORcEjVPQKtOqqm-usa47JtsCOejgXV8ZWc6ZyHyAmgS1oCrnOZ3MQDf5uM4SbHsLFKB3OIxgfvAAoAeNGm3BDAdt6md0Cct7UFdK05Qzt_seYS-jSt5puxsd_VIvXC3wNp3Uca6sw3ns6UlbcreguMiusBv5SrevZ1Z2CJDrTou2WjQBjVipmL7hzBP-nMpQwjuDU5AGSONZt9ATZD7gqJ9CYEC5dIpvOCZprQbM-KIkKVBltTnrFXxv-r3oNIPAgT-YGsxPDSkpa_JFaYMX9iYbv9nuz2qlo0XHMw1Mr1CLfpE-I07pJ8ky8EwHhwf2JZgl0O7t1Vq8d6SqmPMofjhG82PQ3UMU7uwoDJbNteLjN6gFtmMNDFcv2dQzg-kQ0L9qM6nkKwO1F7mVrpW2OhFcVPP1V_wlBQb0Qbdv1vv2KQoS3OrS6iPbOPHS3VfC0dkPgHXWbhlqfSrtwnFwb_EoMdc5S-72D6sKBuY9l2W2RQCHvFw8Cc7w9SkVXbnJWjLvNjfRp0wslNM5HKy5AjJiLlRqSwy_E3rXsqJVUk1Dpv_pkHtKynSoXMyz952Vu9N0UQsJzJ3eK6as0-rRT7zNWrT5P8nf3Z7lfpatmLEzzjXnWwLtVqcTEzFJSHTqgB3qpLDhg5oUd1TpHL_rXTQ-uKklxp1_YOVFEsK3x1-YRzqsS5P5zos98Budj7sTLTM2bQC9WQtPbWEj7w3FOGOgLVUF_w8YpAP2coEppJnayeQLqlx19CD9VXMa5-Qp_JYVNBdIX48nKuUtVPgaaXoTW2arAFoZFPQqHJmJqw383_guvCXS1T-CF06RsdRVqTlwYkSC4VPqYN3i2HmpL6LmU7az3IwZf3rOeyXWX1JnjrPwwAFgZPMgqP-G764C9nSqW9It1TENs5hebYmDNADNnJd-wLKJtneHbcdzt-_Do95SJ3p_dWoKBtQzxvVC2slRO2mju6Ol3KvKwI0ldd8jg4cvBNjT7qaQNfQeH1YlXE_ZD26PL-GQfAN5giF3ccMf9_4fBOEVz-xhuugKKMoRoH2fANWJf-yiNppmNC266arvzaIxRssOhlFbjfvhCRDVGKZKezXD0VA0ueV_5Oy_6zvGys3lyUKbEj5PCkH0vtR1Ulnj54VZ2jMmio2Oczd-y2TZ1vQlYWNxgK_3fPQ3HdAffBXDNltjsR2WuFKi2aL8FghJ8kqUeGEF87JeeQf9wls60wxGdp_nG4FnLbvkx_P9BzWtJCrAXlNFt85FIUZdRBZoHMx5v4vm1lcFj4IXDqlXeeW9uxdXGpSvSbkcWaFFOXQfoiJdZGHGqkQbpFZBfKfqrxfIWAhJCCM0KukD60X5bcrmyBiatSHjg9H0Xt2lUFDUAO8Ws3qnfZy24z1w7-k3HqCMM-BjjcYCQMvCRtwLW_c_Cc63x7DYjl2InHW5D4bIP8fJirCv7cNiQsUACvuqUARDjnoRSAn0__cM_W5t8ef9tA41Ea-nY-V5IqWs30-6CPIXUXRp6L6ncw4tTs7KxyinNchTy4C1CGUaKdKEngNxOCE00_jh0p42ZGeW6GhdYvmqF6EWjQkmiY6lTzB7cHDsx6ufP59rwwBVFYTzGNXIASpaaoDLGAz4qm4vznZ-_zDg5CTt9s0uFaGoNQ5895lBlj4iOOYR_8-bxwNk04So8xr2VlJXm63BjVk4ONlIlhQP1eOi0T0MHX2X-mHnUlER9yEPNcq580PpqclTOLtSvzPdFmzxB_2USWx1y9bU8BHbaYTHuX4qiU5a0iDJug0ZJp9wH_yJKzQ4DVIbCAV3mgegBMwc9szBXshUiSPQjSindJijIfSYBbV3rpez6K5PBBCjEZLOIbGQgwfjCdRgBfy5HRUgvz-K-dTqM54CcZKUKJ3Eo5RqkArF2MlUY4tUJ8-RocQLmE8vttOX8SA4E4_PyNhCRC_uibY8Rgtpw1_3ouaJYZLmCxDAcjX4NkgL-VeaKV7MZsdHbbsk_PbhcgXdWmyUxii7ka4WHLf4QceI9UZxIIpev9d936gyeO7u6PBbv-P97Z7-mcR-M3EUWhto6N27baTXhWDn2A0LkwJkEoobB78eKwOKIiC0JEOkyXCRAVfarMnaWvxPp5HaXLLPq38q6mEIeX39wINfLD-lC5BZwObi4AB4eAZ0ISEBHYQamt44Za4RutRXAKOxKM0lcPTtgt1XXR9woG9tVsBAq9_EVkeuN4BjSSy9YuAWjjTdbNMmUOldzbZKteHMK8yflB1qUtR0F-LZ5iHqvZnJ6LpiauKPpNlE3Gdr-U2pyPl-KzJqYgR_Kd1fT293g6yWtA0XZVc9yxbrUic9fSheXmz1oFJp57CrFD0S4dNPEx6iDb3G3sv1Mea6t0yK-BUb24KmbvJVjG3unTgvXR9BJKjomyO2olL8Z9h-1x-5q3CNxCgEk6xMd0APBGoUPPyDiP0_bDHJKg_-j2EL6XumMYeRHkMIDcQHnOmsqIPcU0VAY9_ORNcX95DOFgJuMvNIZusBW1kTDl_oP4qvuUFGp7luIgTiHHjIU0I4N3xUrzfurrbJrFJhEHC2zkD9nQmXlXW7PDyP5qag38oO7FSnA2r4ulcmIljb90EVYv704AC9-KALiWuLfybKVlyWXT62I128qn7ftNPKjKHRI6qkez5RkZM1Q-fqPv8T5rn41VqGnKps6pv8zZi8KZw5cmRVTHiue0YON-SbscqojurzEWZao_2LOYJfyjFWF1nf3yGIZRFLwNA98lxqv_knNvLvafGY_sV0tXjpluIE7vOGQ8F7UyMEUU4dRUmNfBDoTfNE7QUxcEfJB1jLvqBtP_bH22qp50z2nkG_A6sl6jF4tb9ii3NHqagAuPN7c2whrhY5yCPn8vwiSAxGHwODWGE2nAw7ZJhabKeS98w_mgDgDBAAJWUBQI1XyNuoEgS3YCifinW5U2ht37nxTdWY8K-7hUfpYgzvHgeTj_NDt8Z2xsKWhCMk1m9trceDbuGwMX4G7ElLUPCRcPH8xYW-1dS8nJWs-JrmyRHXBnlT25xzhkbaneIk3D57BpOVxKAKhe">
+<script type="text/javascript" nonce="">
+      
+        recaptcha.frame.Main.init("[\x22finput\x22,null,[\x22conf\x22,null,\x226LdmtBYdAAAAAJmE1hETf4IHoUqXQaFuJxZPO8tW\x22,0,null,null,0.75,null,[21,125,63,73,95,87,41,43,42,83,102,105,109,121],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0]]");
+      
+    </script><div style=""><div class="rc-footer"><div class="rc-separator"></div><div class="rc-controls"><div class="primary-controls"><div class="rc-buttons"><div class="button-holder reload-button-holder"><button class="rc-button goog-inline-block rc-button-reload" title="換一個驗證測試" value="" id="recaptcha-reload-button" tabindex="3"></button></div><div class="button-holder audio-button-holder"><button class="rc-button goog-inline-block rc-button-audio" title="改答語音版本驗證測試" value="" id="recaptcha-audio-button" tabindex="1"></button></div><div class="button-holder image-button-holder"><button class="rc-button goog-inline-block rc-button-image" title="改答圖片驗證測試" value="" id="recaptcha-image-button" tabindex="0" style="display: none;"></button></div><div class="button-holder liveness-button-holder" style="display: none;"></div><div class="button-holder help-button-holder"><button class="rc-button goog-inline-block rc-button-help" title="說明" value="" id="recaptcha-help-button" tabindex="2"></button></div><div class="button-holder undo-button-holder"><button class="rc-button goog-inline-block rc-button-undo" title="復原" value="" id="recaptcha-undo-button" tabindex="0" style="display: none;"></button></div></div><div class="verify-button-holder"><button class="rc-button-default goog-inline-block" title="" value="" id="recaptcha-verify-button" tabindex="0">驗證</button></div></div><div class="rc-challenge-help" style="display:none" tabindex="0"></div></div></div></div></body></html>
